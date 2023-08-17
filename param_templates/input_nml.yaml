@@ -3,26 +3,32 @@
 ---
 MOM_input_nml:
     output_directory:
-        value: "'./'"
+        values: "'./'"
     restart_input_dir:
-        value: "'./'"
+        values: "'./'"
     restart_output_dir:
-        value: "'./'"
+        values: "'./'"
     parameter_filename:
-        value: "'MOM_input', 'MOM_override'"
+        values:
+          $NINST_OCN > 1:
+            "'MOM_input_%4E', 'MOM_override_%4E'"
+          else:
+            "'MOM_input', 'MOM_override'"
 fms_nml:
     clock_grain:
-        value: "'ROUTINE'"
+        values: "'ROUTINE'"
     clock_flags:
-        value: "'NONE'"
+        values: "'NONE'"
     domains_stack_size:
-        value: 5000000
+        values: 5000000
     stack_size:
-        value: 0
+        values: 0
 
 diag_manager_nml:
     flush_nc_files:
-        value: .true.
-    use_mpp_io:
-        value: .true.
+        values: .true.
+
+mpp_io_nml:
+    cf_compliance:
+        values: .true.
 ...
