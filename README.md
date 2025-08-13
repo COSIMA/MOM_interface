@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> **This repository has been archived (read-only) as it is no longer used.**
+
 [![Build Status](https://travis-ci.org/ESCOMP/MOM_interface.svg?branch=master)](https://travis-ci.org/ESCOMP/MOM_interface)
 
 # MOM_interface
